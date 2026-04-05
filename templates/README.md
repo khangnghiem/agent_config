@@ -1,8 +1,8 @@
 # Templates
 
-This directory contains ready-to-use configuration templates for popular AI coding assistants.
+This directory contains starter configuration templates for popular AI coding assistants.
 
-Templates are complete, project-ready files that can be dropped into a repository with minimal customisation.
+Templates can be copied into a repository after replacing the placeholders marked with `TODO`.
 
 ## Structure
 
