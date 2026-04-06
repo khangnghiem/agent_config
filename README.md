@@ -47,7 +47,7 @@ Run this in the root of your project to download and extract the `.agents` folde
 **macOS / Linux (Bash):**
 ```bash
 curl -sL https://github.com/khangnghiem/agent_config/archive/refs/heads/main.tar.gz \
-  | tar -xz -C . --strip-components=1 agent_config-main/.agents
+  | tar -xzk -C . --strip-components=1 agent_config-main/.agents
 ```
 
 **Windows (PowerShell):**
