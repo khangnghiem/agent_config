@@ -1,6 +1,6 @@
-# Antigravity Global Agents Manifest (.agent)
+# Global Agents Manifest (.agents)
 
-This is the manifest of all AI agent workflows and skills for this project.
+This is the manifest of all AI agent workflows for this project.
 
 ## Development Lifecycle
 
@@ -14,8 +14,8 @@ This is the manifest of all AI agent workflows and skills for this project.
 Workflows are hardened command files used to orchestrate complex development cycles.
 
 ### Lifecycle Workflows
-- `/spec`: Create technical specifications. Present ≥3 visual options, recommend one, update `docs/REQUIREMENTS.md`.
-- `/design`: Design the UX/visual system. Present ≥3 design directions with mockups, update `docs/ARCHITECTURE.md`, `docs/DESIGN.md`, `docs/USER_JOURNEY.md`.
+- `/spec`: Create technical specifications. Present ≥3 visual options, recommend one, and produce a requirements document.
+- `/design`: Design the UX/visual system. Present ≥3 design directions with mockups, and produce architecture + design artifacts.
 - `/build`: Build with TDD (Red-Green-Refactor) and ODD (structured logging). Unit/component/integration tests are written here.
 - `/test`: Build and run E2E tests simulating real user behavior (e.g., Playwright bots). Observability-grade logging with drill-down and alerting.
 - `/deploy`: Prepare and execute releases. User-configured per project (TODO template).
@@ -25,14 +25,3 @@ Workflows are hardened command files used to orchestrate complex development cyc
 - `/review`: Review work just done — audit, fix urgent issues, suggest strategic improvements.
 - `/advise`: Open-ended project analysis with prioritized suggestions (Impact × Autonomy).
 - `/debug`: Systematic debugging using ODD (Observe → Reproduce → Fix) methodology.
-
-## Skills (Knowledge & Instructions)
-
-Skills provide deep expertise in specific domains and paradigms.
-
-- `write-spec`: Author structured technical specifications from vague requirements (SDD).
-- `write-unit-tests`: Generate comprehensive unit tests (TDD).
-- `add-observability`: Inject structured logging, monitoring, and tracing (ODD).
-- `diagnose-bug`: Perform root-cause analysis using an Observe -> Test -> Fix continuous loop (ODD + TDD).
-- `code-review`: Perform a thorough, constructive code review.
-- `generate-api-docs`: Produce clear, accurate REST API documentation.

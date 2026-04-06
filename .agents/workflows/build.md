@@ -18,7 +18,7 @@ Otherwise, build everything defined in the approved spec.
 ## Phase 1: Test-First (TDD — Red)
 
 1. Review the approved spec (`docs/REQUIREMENTS.md`) and design (`docs/DESIGN.md`).
-2. Write **failing automated tests first** using the `write-unit-tests` skill:
+2. Write **failing automated tests first**:
 
 | Test Type | Scope | Example |
 |-----------|-------|---------|
@@ -42,7 +42,7 @@ Otherwise, build everything defined in the approved spec.
 
 ## Phase 3: Observability (ODD)
 
-8. Apply the `add-observability` skill at all service boundaries:
+8. Apply observability at all service boundaries:
 
 | Boundary | Logging Required |
 |----------|-----------------|
@@ -53,7 +53,7 @@ Otherwise, build everything defined in the approved spec.
 
 9. Inject `trace_id` / `correlation_id` for request-level tracing across layers.
 10. Define monitoring metrics for key operations (rate, errors, duration — the RED method).
-11. Write or update **regression tests** for any bugs encountered during development using the `diagnose-bug` skill.
+11. Write or update **regression tests** for any bugs encountered during development.
 
 ## Phase 4: Refactor & Compile
 
