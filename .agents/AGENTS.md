@@ -25,3 +25,4 @@ Workflows are hardened command files used to orchestrate complex development cyc
 - `/review`: Review work just done — audit, fix urgent issues, suggest strategic improvements.
 - `/advise`: Open-ended project analysis with prioritized suggestions (Impact × Autonomy).
 - `/debug`: Systematic debugging using ODD (Observe → Reproduce → Fix) methodology.
+- `/learn`: Document repeated mistakes made by AI Agents and prevent recursion.
