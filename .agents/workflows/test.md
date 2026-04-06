@@ -66,7 +66,7 @@ Test depth scales with environment:
 | **Failure path** | Network timeout, invalid input, expired session, 403 forbidden |
 | **Edge case** | Concurrent users, large datasets, slow connections, empty states |
 
-6. If fixing a bug, use the `diagnose-bug` skill to write a regression E2E test first.
+6. If fixing a bug, write a regression E2E test first.
 
 ## Phase 4: Observability-Grade Logging
 

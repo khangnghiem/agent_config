@@ -6,7 +6,6 @@ description: Systematic debugging using ODD (Observe → Reproduce → Fix) meth
 $ARGUMENTS
 
 > **Paradigm**: Observability-Driven Development (ODD) + Test-Driven Development (TDD)
-> **Skill**: Uses the `diagnose-bug` skill for root-cause analysis.
 
 // turbo-all
 
@@ -43,7 +42,6 @@ Before touching any code, **gather data**.
 
 6. Write a **regression test** that reliably reproduces the bug.
    - The test must **fail** (Red) before any fix is applied.
-   - Use the `write-unit-tests` skill for guidance on test structure.
    - Never skip this step — the test prevents the bug from ever returning.
 
 7. For UI/visual bugs that can't be unit-tested:
@@ -70,7 +68,7 @@ Before touching any code, **gather data**.
 | **Full suite** | All existing tests still pass |
 
 12. Document a **Debug Report** covering: Symptom → Root Cause (5 Whys chain) → Regression Test (file + test name) → Fix (before/after) → Prevention (what observability was added).
-
+13. Formulate a learning: Ask yourself, "What project-level rule or constraint would prevent this class of bug?" and execute the `/learn` workflow to codify this insight.
 ---
 
 ## Rules & Anti-Patterns

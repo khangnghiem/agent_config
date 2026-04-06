@@ -8,15 +8,18 @@ description: Review the work just done and suggest improvements
 
 $ARGUMENTS
 
-If `$ARGUMENTS` is provided, narrow the review to that scope (e.g., `/review security`, `/review last commit`).
-Otherwise, review all uncommitted changes.
+**Scope: Current conversation only.** Review ONLY the most recent work done in this conversation.
+Do NOT audit the broader codebase, unrelated files, or prior conversations unless the user explicitly asks.
+
+If `$ARGUMENTS` is provided, narrow the review further (e.g., `/review security`, `/review last commit`).
 
 Be concise. No filler. Reference files and lines directly.
 
 ## 1. Gather What Changed
 
-- Run `git diff` and `git status` to see exactly what was modified.
-- Review the last 2 user prompts and their results for intent and context.
+- Run `git diff` (or `git diff HEAD~1` for the most recent commit) to see exactly what was modified.
+- Run `git status` to check for uncommitted changes.
+- Cross-reference with the recent conversation context — only review files and changes touched in this session.
 
 ## 2. Self-Audit
 
