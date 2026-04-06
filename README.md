@@ -1,7 +1,7 @@
 # agent_config
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Workflows](https://img.shields.io/badge/workflows-9-brightgreen.svg)](.agents/workflows/)
+[![Workflows](https://img.shields.io/badge/workflows-10-brightgreen.svg)](.agents/workflows/)
 [![Convention](https://img.shields.io/badge/convention-.agents%2F-purple.svg)](.agents/)
 
 A curated collection of **AI agent workflows and templates** for use with coding assistants such as GitHub Copilot, Cursor, and Windsurf — built on the **Agent Playbook**.
@@ -37,6 +37,7 @@ agent_config/
 | `/review` | Audit recent work, fix urgent issues, suggest improvements |
 | `/advise` | Open-ended project analysis with prioritized suggestions |
 | `/debug` | Systematic debugging using ODD (Observe → Reproduce → Fix) |
+| `/learn` | Document repeated mistakes made by AI Agents and prevent recursion |
 
 ## Quick Start
 
