@@ -1,62 +1,32 @@
 # agent_config
 
-A curated collection of **AI agent rules, skills, and templates** for use with coding assistants such as GitHub Copilot, Cursor, and Windsurf.
+A curated collection of **AI agent rules, skills, and templates** for use with coding assistants such as GitHub Copilot, Cursor, and Windsurf, strictly adhering to **Antigravity Agent Playbook** conventions.
 
-## Repository Structure
+## Repository Structure (`.agents`/ style)
 
 ```
 agent_config/
-├── rules/                   # Behavioural rules and coding standards
-│   ├── general/             # Language-agnostic rules
-│   ├── languages/           # Language-specific rules (Python, TypeScript, …)
-│   └── frameworks/          # Framework-specific rules (FastAPI, React, …)
-├── skills/                  # Reusable agent skills (prompt instruction sets)
-└── templates/               # Ready-to-use agent configuration templates
-    ├── copilot/             # GitHub Copilot (.github/copilot-instructions.md)
-    ├── cursor/              # Cursor (.cursorrules)
-    └── windsurf/            # Windsurf (.windsurfrules)
+├── .agents/                 # Drop-in folder containing the unified context
+│   ├── AGENTS.md            # REFERENCE: Manifest of all workflows/skills
+│   ├── rules/
+│   │   └── GEMINI.md        # AUTHORITY: Consolidated 3-tier rules (Universal, Stack, Workflow)
+│   ├── workflows/           # ACTIONS: Hardened command files (/build, /deploy, etc.)
+│   └── skills/              # REFERENCE: Atomic specialized folders containing SKILL.md
+└── templates/               # (Legacy/Pointers) Configuration stubs pointing to .agents/rules/GEMINI.md
 ```
 
 ## Quick Start
 
-1. **Pick your assistant** – Browse `templates/` for the configuration file that matches your AI coding tool.
-2. **Copy the template** – Place it in the location indicated at the top of the file (e.g. `.github/copilot-instructions.md`).
-3. **Add rules** – Copy or reference the relevant files from `rules/` into the template.
-4. **Add skills** – Copy or reference the relevant files from `skills/` to teach the agent specific tasks.
-5. **Customise** – Replace every `TODO` placeholder with project-specific content.
-
-## Contents
-
-### Rules
-
-| File | Description |
-|------|-------------|
-| `rules/general/coding-standards.md` | Universal coding standards (quality, comments, testing, security) |
-| `rules/languages/python.md` | Python style, typing, and best-practice rules |
-| `rules/languages/typescript.md` | TypeScript style, types, and React conventions |
-| `rules/frameworks/fastapi.md` | FastAPI project structure, API design, and testing rules |
-
-### Skills
-
-| File | Description |
-|------|-------------|
-| `skills/write-unit-tests.md` | Generate comprehensive unit tests |
-| `skills/code-review.md` | Perform structured, actionable code reviews |
-| `skills/generate-api-docs.md` | Produce REST API documentation from source code |
-
-### Templates
-
-| File | Tool | Target path |
-|------|------|-------------|
-| `templates/copilot/copilot-instructions.md` | GitHub Copilot | `.github/copilot-instructions.md` |
-| `templates/cursor/cursorrules.md` | Cursor | `.cursorrules` |
-| `templates/windsurf/windsurfrules.md` | Windsurf | `.windsurfrules` |
+1. **Pick your assistant** – Browse `templates/` for the minimal configuration file that matches your AI coding tool.
+2. **Copy the structure** – Map the `.agents/` directory into the root of your project.
+3. **Absorb Rules** – Instead of sprawling `.cursorrules`, everything is centralized natively in `.agents/rules/GEMINI.md`.
+4. **Trigger Workflows** – Use slash commands based on the action scripts in `.agents/workflows/` (e.g. `/build`).
+5. **Utilise Skills** – Sub-agents will automatically refer to specialized `.agents/skills/<skill>/SKILL.md` folders when undertaking defined tasks.
 
 ## Contributing
 
 Contributions are welcome! Please:
 
-- Add new rules under the appropriate `rules/` subdirectory.
-- Add new skills as self-contained Markdown files in `skills/`.
-- Add new templates under `templates/<tool-name>/`.
-- Keep files focused and well-documented.
+- Use **Phase-driven architecture** for Workflows (`.agents/workflows/*.md`).
+- Ensure all skills are a directory containing `SKILL.md`.
+- Keep the `.agents/rules/GEMINI.md` lean using the 3-Tier Rule System. 
